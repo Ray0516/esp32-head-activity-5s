@@ -2,6 +2,20 @@
 
 這是 ESP32 + MPU6050 的獨立韌體。六軸資料、轉譯、濾波、時間窗特徵、活動指紋資料庫與 21 棵多分枝決策樹都在 ESP32 端執行；接收端不需要再做辨識。
 
+## 這個專案在做什麼
+
+Auritus 原始活動資料包含九種頭戴／耳戴情境的行為標籤：Standing、Sitting、Laying、Turn left、Turn right、Walking、Running/Jogging、Jumping 與 Falling。本專案不是把九個名稱直接顯示出來，而是把其中八種非跌倒行為依活動強度整合成四個適合設備控制的穩定狀態：
+
+| Auritus 原始行為 | ESP32 強度狀態 | 等級 |
+|---|---|---:|
+| Standing、Sitting、Laying | 靜止 `still` | 0 |
+| Turn left、Turn right | 輕度 `light` | 1 |
+| Walking | 中度 `moderate` | 2 |
+| Running/Jogging、Jumping | 高度 `high` | 3 |
+| Falling | 不併入活動強度；保留給獨立跌倒模組 | — |
+
+這個整合的目的，是讓後續馬達、風量或其他機器控制只需要處理清楚的 0–3 等級，不必理解九種細部動作。資料與標籤來自 Auritus；六特徵選擇、四級對應、21 棵樹的訓練，以及 ESP32 C++ 格式匯出，是本專案為嵌入式即時運算製作的版本。它不是固定門檻或假資料，也不是原封不動複製 Auritus 的官方預訓練模型。
+
 ## 最終狀態
 
 | 等級 | JSON 狀態 | 說明 |
