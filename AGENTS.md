@@ -1,4 +1,4 @@
-# AI / Agent Model Integrity Contract
+# AI / Agent Model Integration Notes
 
 These instructions apply to every AI agent, code generator, contributor, and automation working in this repository.
 
