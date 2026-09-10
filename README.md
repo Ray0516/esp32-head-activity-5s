@@ -66,4 +66,8 @@ pio device monitor --baud 230400
 - `MODEL_DATABASE.json`：來源檔雜湊、欄位對應、資料筆數、固定種子、測試結果與匯出檔雜湊。
 - 原始 CSV 保持唯讀；ESP32 使用的是轉譯後放在 Flash 的 C++ 資料表。
 
-完整序列 API 請看 [API.md](API.md)。
+更多資料：
+
+- [決策樹、執行邏輯與步驟](DECISION_LOGIC.md)
+- [四種活動指紋清單](FINGERPRINTS.md)
+- [Serial API](API.md)
