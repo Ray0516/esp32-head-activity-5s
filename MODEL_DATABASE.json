@@ -1,0 +1,102 @@
+{
+  "source": "https://github.com/nesl/auritus",
+  "source_files_read_only": {
+    "FeatMat.csv_sha256": "7f344c5964abd187fd8ea8a3a86e670d13fef76cac93a7fd08fc4dc5a8008d05",
+    "Labelmat.csv_sha256": "b8aecc89f274b5ff26f4c438698a1fe8ce2ac019fd7a4e763de892d396dcdae1"
+  },
+  "source_rows_total": 16233,
+  "activity_rows_used": 13706,
+  "feature_columns_zero_based": [
+    187,
+    206,
+    207,
+    217,
+    236,
+    237
+  ],
+  "feature_names": [
+    "acc_mean",
+    "acc_std",
+    "acc_var",
+    "gyro_mean",
+    "gyro_std",
+    "gyro_var"
+  ],
+  "class_names": [
+    "still",
+    "light",
+    "moderate",
+    "high"
+  ],
+  "seed": 6050,
+  "trees": 21,
+  "nodes": 2157,
+  "test_rows": 3427,
+  "accuracy": 0.98978698570178,
+  "classification_report": {
+    "still": {
+      "precision": 0.9892205638474295,
+      "recall": 0.9933388842631141,
+      "f1-score": 0.9912754466140423,
+      "support": 1201.0
+    },
+    "light": {
+      "precision": 0.9893617021276596,
+      "recall": 0.9755244755244755,
+      "f1-score": 0.9823943661971831,
+      "support": 858.0
+    },
+    "moderate": {
+      "precision": 0.9775862068965517,
+      "recall": 0.9895287958115183,
+      "f1-score": 0.9835212489158717,
+      "support": 573.0
+    },
+    "high": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 795.0
+    },
+    "accuracy": 0.98978698570178,
+    "macro avg": {
+      "precision": 0.9890421182179102,
+      "recall": 0.989598038899777,
+      "f1-score": 0.9892977654317743,
+      "support": 3427.0
+    },
+    "weighted avg": {
+      "precision": 0.9898112442830519,
+      "recall": 0.98978698570178,
+      "f1-score": 0.9897793560576138,
+      "support": 3427.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      1193,
+      4,
+      4,
+      0
+    ],
+    [
+      12,
+      837,
+      9,
+      0
+    ],
+    [
+      1,
+      5,
+      567,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      795
+    ]
+  ],
+  "header_sha256": "b6810cba06280ce8235ffe0b9d94c1f43b3e1cb4f21d9469ba27fbb7f33d0e44"
+}
